@@ -1,0 +1,35 @@
+.sapUiContentPadding button{
+    width: 100%;
+    padding-top: 3rem;
+}
+
+.sapUiVlt.sapUiContentPadding{
+    padding-top:5rem !important;
+}
+
+#__button1 .sapMToggleBtnPressed{
+    background-color: #f37221 !important;
+}
+#__button2 .sapMToggleBtnPressed{
+    background-color: green !important;
+}
+
+
+#__button1-inner{
+    background-color: gray;
+}
+#__button2-inner{
+    background-color: gray;
+}
+
+.sapUiUfdSpltContCanvas {
+    background-color: #a4c5e4;
+}
+.sapUiUfdSpltContPane{
+    background-color: #bddde6 !important;
+}
+#__button0-inner{
+    background-color: #41a943 !important;
+    color: black !important;
+    font-size: 1rem !important;
+}

@@ -1,0 +1,46 @@
+<mvc:View controllerName="sapStackedChart.StackedColumn" 
+    xmlns="sap.m"
+    xmlns:viz="sap.viz.ui5.controls" 
+    xmlns:l="sap.ui.layout"
+    xmlns:u="sap.ui.unified" 
+    xmlns:mvc="sap.ui.core.mvc"  
+    height="500px" width="800px">
+    
+    
+    <u:SplitContainer
+        id="mySplitContainer"
+        showSecondaryContent="true">
+        <u:secondaryContent>
+            <l:VerticalLayout
+                class="sapUiContentPadding"
+                width="100%">
+                <l:content>
+                    <Label text="From Year" labelFor="from" design="Bold" />
+                    <Input id="from" type="text"/>
+                    <Label text="To Year" labelFor="to" design="Bold"/>
+                    <Input id="to" type="text"/>
+
+                    <Button type="Accept"
+                            text="submit"
+                            press="onSubmit"
+                            ariaDescribedBy="acceptButtonDescription genericButtonDescription">
+                        <layoutData>
+                            <FlexItemData growFactor="1" />
+                        </layoutData>
+                    </Button>
+                </l:content>
+            </l:VerticalLayout>
+        </u:secondaryContent>
+        <u:content>
+            <viz:VizFrame  xmlns="sap.viz" id="idVizFrame"  vizType="stacked_column" width="100%" height="90%">
+            </viz:VizFrame>
+            <FlexBox
+                justifyContent="Center">
+                <items>
+                    <ToggleButton text="Amsterdam" enabled="true" pressed="true" type="Emphasized" class="sapUiSmallMarginEnd am-btn" press="onFirstBtn"/>
+                    <ToggleButton text="Rotterdam" enabled="true" pressed="true"  type="Emphasized" class="sapUiSmallMarginEnd ro-btn" press="onSecondBtn"/>
+                </items>
+            </FlexBox>
+        </u:content>
+	</u:SplitContainer>
+</mvc:View>
